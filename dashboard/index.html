@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Launch Radar — pre-token protocols, ranked by implied value</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div>
+      <h1>Token Launch Radar</h1>
+      <p class="sub">Every genuine launch candidate in the snapshot — a protocol that records no token and is not a wrapped, staked or bridged product of one that already trades — ranked by what its token would be worth if it launched one today.</p>
+    </div>
+    <div class="meta" id="meta"></div>
+  </div>
+</header>
+
+<main>
+  <section class="how" id="how">
+    <h2>How the value is worked out</h2>
+    <p>Implied value = TVL &times; benchmark &times; growth &times; age. The benchmark is the median market-cap / TVL of the token-bearing protocols in the same category (the cross-category median when a category has fewer than five of them). Growth is the 7-day TVL change, clamped and damped. Age is a saturating bonus for how long the protocol has run with no token. Nothing here names a protocol in advance: every figure is computed from the snapshot.</p>
+    <p class="note">A protocol is listed as pre-token when DefiLlama records no token for it. That is a record, not a proof: a listed protocol may still have a token its record does not carry. The board ranks genuine launch candidates only: wrapped, staked and bridged products of tokens that already trade are left out, however large their TVL — WBTC is Bitcoin on Ethereum, not a protocol waiting on a launch. The watchlist is the floor, never the ceiling: the board ranks all launch candidates, not only the forty on it.</p>
+  </section>
+
+  <section class="controls">
+    <label>Search <input id="q" type="search" placeholder="protocol name or slug" autocomplete="off"></label>
+    <label>Category <select id="cat"><option value="">All categories</option></select></label>
+    <label>Chain <select id="chain"><option value="">All chains</option></select></label>
+    <label class="check"><input id="watch" type="checkbox"> Watchlist only</label>
+    <label>Sort <select id="sort">
+      <option value="value">Implied value</option>
+      <option value="tvl">TVL</option>
+      <option value="growth">7-day growth</option>
+      <option value="age">Age (days listed)</option>
+      <option value="name">Name A–Z</option>
+    </select></label>
+    <span class="count" id="count"></span>
+  </section>
+
+  <section class="board-wrap">
+    <table class="board" id="board">
+      <colgroup>
+        <col class="c-rank"><col class="c-name"><col class="c-cat"><col class="c-chain">
+        <col class="c-tvl"><col class="c-chg"><col class="c-age"><col class="c-val">
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="num">Rank</th>
+          <th>Protocol</th>
+          <th>Category</th>
+          <th>Chain</th>
+          <th class="num">TVL</th>
+          <th class="num">7d</th>
+          <th class="num">Age</th>
+          <th class="num">Implied value</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <p class="empty" id="empty" hidden>No protocol matches this filter.</p>
+  </section>
+
+  <div class="detail-backdrop" id="detailBackdrop" hidden>
+    <section class="detail" id="detail">
+      <button class="close" id="closeDetail" type="button">Close &times;</button>
+      <div id="detailBody"></div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <p>Data: DefiLlama protocols snapshot, fetched once and frozen. The board is the entry's own ranking; it is not a prediction that any protocol will issue a token, or when.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
