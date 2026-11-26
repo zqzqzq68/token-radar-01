@@ -1,8 +1,8 @@
 # token-radar-01
 
-[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01-run-20261122?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
-[![rank](https://make.fun/badge/token-radar-01/zqzqzq68/token-radar-01/rank.svg)](https://make.fun/bounty/token-radar-01-run-20261122/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
-[![reward](https://make.fun/badge/token-radar-01/zqzqzq68/token-radar-01/reward.svg)](https://make.fun/bounty/token-radar-01-run-20261122?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/zqzqzq68/token-radar-01/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/zqzqzq68/token-radar-01/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
 
 A token launch radar: it reads a sealed DefiLlama snapshot of 758 protocols, ranks the 198 genuine pre-token launch candidates by an implied market value, and writes a sortable, filterable dashboard plus a concrete farming plan for every candidate. The value model is `implied = TVL × benchmark × growth × age`: the benchmark is the median market-cap/TVL ratio of token-bearing protocols in the same category (cross-category median where the category has fewer than five comparables), growth scales with the 7-day TVL change, and age scales with how long the protocol has run with no token. Wrapped, bridged and staked products of tokens that already trade (Bridge, Liquid Staking, Restaking, CEX, versioned and exchange-named products) are excluded, so the board lists launch candidates, not tokens that already exist. Entry for make.fun's "Build the best token launch radar" bounty ($1,325 in USDC).
 
